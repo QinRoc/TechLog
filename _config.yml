@@ -65,6 +65,11 @@ tag_map:
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
+#article
+article:
+    #https://blog.zhangruipeng.me/hexo-theme-icarus/Configuration/Posts/adding-a-thumbnail-to-your-article/
+    thumbnail: true
+
 # Pagination
 ## Set per_page to 0 to disable pagination
 per_page: 15
@@ -80,7 +85,7 @@ theme: icarus
 deploy: 
   type: git
   repo: https://github.com/QinRoc/TechLog.git
-  branch: master
+  branch: gh-pages-hexo
 
 #Plugins
 #hexo-permalink-pinyin
