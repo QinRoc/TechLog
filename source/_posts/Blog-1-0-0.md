@@ -2,6 +2,8 @@
 title: Blog 1.0.0
 date: 2019-03-24 11:31:48
 tags: Blog
+toc: true
+draft: false
 ---
 
 # Blog
