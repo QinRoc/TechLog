@@ -1,9 +1,14 @@
 ---
+layout: post
 title: Blog 1.0.0
 date: 2019-03-24 11:31:48
+updated: 
+thumbnail: 
+categories: 
 tags: Blog
+comments: true
+permalink: true
 toc: true
-draft: false
 ---
 
 # Blog

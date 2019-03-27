@@ -1,9 +1,13 @@
 ---
+layout: post
 title: 广告协会DIF平台
 date: 2019-03-27 18:22:56
-tags: AD Blockchain  
-thumbnail: /gallery/thumbnails/desert.jpg
-draft: true
+updated: 
+thumbnail: 
+categories: 
+tags: [AD,Blockchain]
+comments: true
+permalink: true
 toc: true
 ---
 

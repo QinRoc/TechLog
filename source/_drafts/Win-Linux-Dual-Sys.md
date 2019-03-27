@@ -1,9 +1,14 @@
 ---
+layout: draft
 title: Win_Linux_Dual_Sys
 date: 2019-03-24 18:22:56
-tags: Windows Linux
+updated: 
+thumbnail: 
+categories: 
+tags: [Windows,Linux]
+comments: true
+permalink: true
 toc: true
-draft: true
 ---
 
 # 过程

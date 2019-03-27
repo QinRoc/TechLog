@@ -1,9 +1,14 @@
 ---
+layout: draft
 title: One_Client_with_Multi_Git_Account
 date: 2019-03-24 18:52:03
+updated: 
+thumbnail: 
+categories: 
 tags: Git
+comments: true
+permalink: true
 toc: true
-draft: true
 ---
 
 
