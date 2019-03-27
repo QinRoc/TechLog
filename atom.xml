@@ -6,7 +6,7 @@
   <link href="/TechLog/atom.xml" rel="self"/>
   
   <link href="http://qinroc.github.com/TechLog/"/>
-  <updated>2019-03-27T08:12:16.932Z</updated>
+  <updated>2019-03-27T09:02:28.744Z</updated>
   <id>http://qinroc.github.com/TechLog/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Blog 1.0.0</title>
-    <link href="http://qinroc.github.com/TechLog/2019/03/24/blog-1-0-0/"/>
-    <id>http://qinroc.github.com/TechLog/2019/03/24/blog-1-0-0/</id>
+    <link href="http://qinroc.github.com/TechLog/2019/03/24/true/"/>
+    <id>http://qinroc.github.com/TechLog/2019/03/24/true/</id>
     <published>2019-03-24T03:31:48.000Z</published>
-    <updated>2019-03-27T08:12:16.932Z</updated>
+    <updated>2019-03-27T09:02:28.744Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Blog"><a href="#Blog" class="headerlink" title="Blog"></a>Blog</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>形式：自建静态博客<br>托管平台：GitHub<br>静态博客生成器：Hexo<br>主题：hexo-theme-icarus<br>CI： Travis.CI</p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>统计：Google Analytics, Baidu, 不蒜子<br>评论：gittalk<br>分享：share.js<br>标题永久地址转换： hexo-permalink-pinyin<br>搜索：内置</p><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ul><li>本地调试时使用Ctrl+C，而非Ctrl+Z–导致端口占用。</li></ul><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul><li>配置CDN</li></ul><h2 id="Change-Log"><a href="#Change-Log" class="headerlink" title="Change Log"></a>Change Log</h2><h3 id="V1-0-0"><a href="#V1-0-0" class="headerlink" title="V1.0.0"></a>V1.0.0</h3><ul><li>初始化Blog并上传Git</li></ul>]]></content>
     
