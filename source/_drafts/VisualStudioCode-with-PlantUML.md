@@ -1,6 +1,6 @@
 ---
 layout: draft
-title: VisualCode中PlantUML使用
+title: VisualStudioCode中PlantUML使用
 date: 2019-04-01
 updated:
 thumbnail:
@@ -15,7 +15,7 @@ toc: true
 
 ## 插件
 
-[VisualStudio的插件介绍页](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+[VisualStudioCode的插件介绍页](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
 
 [插件GitHub](https://github.com/qjebbs/vscode-plantuml)
 
