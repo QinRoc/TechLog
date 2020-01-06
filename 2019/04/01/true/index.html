@@ -2,23 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>标签: Segmentation - Roc&#39;s Tech Log</title>
+<title>VisualStudioCode中PlantUML使用 - Roc&#39;s Tech Log</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
     
-    <meta name="description" content="Record learning and technical problem.">
-<meta name="keywords" content="Java Tech 技术 后端 Back-end">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Roc&#39;s Tech Log">
-<meta property="og:url" content="http://qinroc.github.com/TechLog/tags/Segmentation/index.html">
+    <meta name="description" content="1. 准备1.1 插件 VisualStudioCode的插件介绍页 插件GitHub  1.2 graphviz环境 下载Windows环境graphviz包 解压zip包/安装 设置环境变量：Path中增加bin目录路径 验证  dot -v 命令验证： 123456789101112131415dot - graphviz version 2.38.0 (20140413.2041)libd">
+<meta name="keywords" content="VisualCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VisualStudioCode中PlantUML使用">
+<meta property="og:url" content="http://qinroc.github.com/TechLog/2019/04/01/true/index.html">
 <meta property="og:site_name" content="Roc&#39;s Tech Log">
-<meta property="og:description" content="Record learning and technical problem.">
+<meta property="og:description" content="1. 准备1.1 插件 VisualStudioCode的插件介绍页 插件GitHub  1.2 graphviz环境 下载Windows环境graphviz包 解压zip包/安装 设置环境变量：Path中增加bin目录路径 验证  dot -v 命令验证： 123456789101112131415dot - graphviz version 2.38.0 (20140413.2041)libd">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-01-06T14:29:29.911Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Roc&#39;s Tech Log">
-<meta name="twitter:description" content="Record learning and technical problem.">
+<meta name="twitter:title" content="VisualStudioCode中PlantUML使用">
+<meta name="twitter:description" content="1. 准备1.1 插件 VisualStudioCode的插件介绍页 插件GitHub  1.2 graphviz环境 下载Windows环境graphviz包 解压zip包/安装 设置环境变量：Path中增加bin目录路径 验证  dot -v 命令验证： 123456789101112131415dot - graphviz version 2.38.0 (20140413.2041)libd">
 
 
 
@@ -144,6 +145,10 @@ var _hmt = _hmt || [];
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -158,101 +163,71 @@ var _hmt = _hmt || [];
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/TechLog/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Segmentation</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-01-03T16:00:00.000Z">2020-01-04</time>
+                <time class="level-item has-text-grey" datetime="2019-03-31T16:00:00.000Z">2019-04-01</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 359 个字)
+                    2 分钟 读完 (大约 244 个字)
                 </span>
                 
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
                 
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/TechLog/2020/01/04/true/">日语分词</a>
+                VisualStudioCode中PlantUML使用
             
         </h1>
         <div class="content">
-            <h2 id="分词库"><a href="#分词库" class="headerlink" title="分词库"></a>分词库</h2><p>Google和Github上以“japanese segmentation”为关键词搜索：</p>
-<ul>
-<li><a href="https://github.com/go-ego/gse" target="_blank" rel="noopener">gse</a> #Go</li>
+            <h2 id="1-准备"><a href="#1-准备" class="headerlink" title="1. 准备"></a>1. 准备</h2><h3 id="1-1-插件"><a href="#1-1-插件" class="headerlink" title="1.1 插件"></a>1.1 插件</h3><ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml" target="_blank" rel="noopener">VisualStudioCode的插件介绍页</a></li>
+<li><a href="https://github.com/qjebbs/vscode-plantuml" target="_blank" rel="noopener">插件GitHub</a></li>
 </ul>
+<h3 id="1-2-graphviz环境"><a href="#1-2-graphviz环境" class="headerlink" title="1.2 graphviz环境"></a>1.2 graphviz环境</h3><ol>
+<li>下载<a href="https://graphviz.gitlab.io/_pages/Download/Download_windows.html" target="_blank" rel="noopener">Windows环境graphviz包</a></li>
+<li>解压zip包/安装</li>
+<li>设置环境变量：Path中增加bin目录路径</li>
+<li>验证</li>
+</ol>
+<p><code>dot -v</code> 命令验证：</p>
+<figure class="highlight cmd hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">dot - graphviz version <span class="hljs-number">2</span>.<span class="hljs-number">38</span>.<span class="hljs-number">0</span> (<span class="hljs-number">20140413</span>.<span class="hljs-number">2041</span>)</span><br><span class="line">libdir = "c:\Program\Document\graphviz-<span class="hljs-number">2</span>.<span class="hljs-number">38</span>\release\bin"</span><br><span class="line">Activated plugin library: gvplugin_dot_layout.dll</span><br><span class="line">Using layout: dot:dot_layout</span><br><span class="line">Activated plugin library: gvplugin_core.dll</span><br><span class="line">Using render: dot:core</span><br><span class="line">Using device: dot:dot:core</span><br><span class="line">The plugin configuration file:</span><br><span class="line"><span class="hljs-function">        c:\<span class="hljs-title">Program</span>\<span class="hljs-title">Document</span>\<span class="hljs-title">graphviz</span>-2.38\<span class="hljs-title">release</span>\<span class="hljs-title">bin</span>\<span class="hljs-title">config6</span></span></span><br><span class="line"><span class="hljs-function">                <span class="hljs-title">was</span> <span class="hljs-title">successfully</span> <span class="hljs-title">loaded</span>.</span></span><br><span class="line"><span class="hljs-function">    <span class="hljs-title">render</span>      :  <span class="hljs-title">cairo</span> <span class="hljs-title">dot</span> <span class="hljs-title">fig</span> <span class="hljs-title">gd</span> <span class="hljs-title">gdiplus</span> <span class="hljs-title">map</span> <span class="hljs-title">pic</span> <span class="hljs-title">pov</span> <span class="hljs-title">ps</span> <span class="hljs-title">svg</span> <span class="hljs-title">tk</span> <span class="hljs-title">vml</span> <span class="hljs-title">vrml</span> <span class="hljs-title">xdot</span></span></span><br><span class="line"><span class="hljs-function">    <span class="hljs-title">layout</span>      :  <span class="hljs-title">circo</span> <span class="hljs-title">dot</span> <span class="hljs-title">fdp</span> <span class="hljs-title">neato</span> <span class="hljs-title">nop</span> <span class="hljs-title">nop1</span> <span class="hljs-title">nop2</span> <span class="hljs-title">osage</span> <span class="hljs-title">patchwork</span> <span class="hljs-title">sfdp</span> <span class="hljs-title">twopi</span></span></span><br><span class="line"><span class="hljs-function">    <span class="hljs-title">textlayout</span>  :  <span class="hljs-title">textlayout</span></span></span><br><span class="line"><span class="hljs-function">    <span class="hljs-title">device</span>      :  <span class="hljs-title">bmp</span> <span class="hljs-title">canon</span> <span class="hljs-title">cmap</span> <span class="hljs-title">cmapx</span> <span class="hljs-title">cmapx_np</span> <span class="hljs-title">dot</span> <span class="hljs-title">emf</span> <span class="hljs-title">emfplus</span> <span class="hljs-title">eps</span> <span class="hljs-title">fig</span> <span class="hljs-title">gd</span> <span class="hljs-title">gd2</span> <span class="hljs-title">gif</span> <span class="hljs-title">gv</span> <span class="hljs-title">imap</span> <span class="hljs-title">imap_np</span> <span class="hljs-title">ismap</span> <span class="hljs-title">jpe</span> <span class="hljs-title">jpeg</span> <span class="hljs-title">jpg</span> <span class="hljs-title">metafile</span> <span class="hljs-title">pdf</span> <span class="hljs-title">pic</span> <span class="hljs-title">plain</span> <span class="hljs-title">plain</span>-<span class="hljs-title">ext</span> <span class="hljs-title">png</span> <span class="hljs-title">pov</span> <span class="hljs-title">ps</span> <span class="hljs-title">ps2</span> <span class="hljs-title">svg</span> <span class="hljs-title">svgz</span> <span class="hljs-title">tif</span> <span class="hljs-title">tiff</span> <span class="hljs-title">tk</span> <span class="hljs-title">vml</span> <span class="hljs-title">vmlz</span> <span class="hljs-title">vrml</span> <span class="hljs-title">wbmp</span> <span class="hljs-title">xdot</span> <span class="hljs-title">xdot1</span>.2 <span class="hljs-title">xdot1</span>.4</span></span><br><span class="line"><span class="hljs-function">    <span class="hljs-title">loadimage</span>   :  (<span class="hljs-title">lib</span>) <span class="hljs-title">bmp</span> <span class="hljs-title">eps</span> <span class="hljs-title">gd</span> <span class="hljs-title">gd2</span> <span class="hljs-title">gif</span> <span class="hljs-title">jpe</span> <span class="hljs-title">jpeg</span> <span class="hljs-title">jpg</span> <span class="hljs-title">png</span> <span class="hljs-title">ps</span> <span class="hljs-title">svg</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="2-语法"><a href="#2-语法" class="headerlink" title="2.语法"></a>2.语法</h2><p><a href="http://plantuml.com/zh/sitemap-language-specification" target="_blank" rel="noopener">PlantUML Document</a><br><a href="http://plantuml.com/zh/" target="_blank" rel="noopener"></a></p>
+<h2 id="3-问题"><a href="#3-问题" class="headerlink" title="3. 问题"></a>3. 问题</h2><ol>
+<li>No @startuml found</li>
+</ol>
 <blockquote>
-<p>Go efficient text segmentation @vcaesar; support english, chinese, japanese and other. Go 语言高性能分词</p>
+<p><code>@startuml</code> 需要和 <code>@enduml配对</code></p>
 </blockquote>
-<ul>
-<li><a href="https://github.com/ikawaha/kagome" target="_blank" rel="noopener">kagome</a> #Go</li>
-</ul>
-<blockquote>
-<p>Self-contained Japanese Morphological Analyzer written in pure Go</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/WorksApplications/Sudachi" target="_blank" rel="noopener">Sudachi</a> #Java #Python</li>
-</ul>
-<blockquote>
-<p>A Japanese Tokenizer for Business</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/WorksApplications/SudachiPy" target="_blank" rel="noopener">SudachiPy</a></li>
-</ul>
-<blockquote>
-<p>Python version of Sudachi, a Japanese tokenizer.</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/WorksApplications/SudachiDict" target="_blank" rel="noopener">SudachiDict</a></li>
-</ul>
-<blockquote>
-<p>A lexicon for Sudachi</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/taishi-i/nagisa" target="_blank" rel="noopener">nagisa</a> #Python</li>
-</ul>
-<blockquote>
-<p>A Japanese tokenizer based on recurrent neural networks</p>
-</blockquote>
-<ul>
-<li><a href="https://www.atilika.org/" target="_blank" rel="noopener">Kuromoji</a><blockquote>
-<p>Kuromoji is an open source Japanese morphological analyzer written in Java.</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>选用SudachiPy进行分词。</p>
-<h2 id="安装SudachiPy库"><a href="#安装SudachiPy库" class="headerlink" title="安装SudachiPy库"></a>安装SudachiPy库</h2><figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install SudachiPy</span><br></pre></td></tr></table></figure>
-<p>出现的问题:</p>
-<blockquote>
-<p>x86_64-linux-gnu-gcc: error trying to exec ‘cc1plus’: execvp: No such file or directory</p>
-</blockquote>
-<p><a href="https://stackoverflow.com/questions/22414109/g-error-trying-to-exec-cc1plus-execvp-no-such-file-or-directory/27944551#27944551" target="_blank" rel="noopener">g++: error trying to exec ‘cc1plus’: execvp: No such file or directory</a></p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install g++</span><br><span class="line">python3 -m pip install https://object-storage.tyo2.conoha.io/v1/nc_2520839e1f9641b08211a5c85243124a/sudachi/SudachiDict_core-20191224.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="安装词典"><a href="#安装词典" class="headerlink" title="安装词典"></a>安装词典</h2><figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install https://object-storage.tyo2.conoha.io/v1/nc_2520839e1f9641b08211a5c85243124a/sudachi/SudachiDict_core-20191224.tar.gz</span><br></pre></td></tr></table></figure>
-<p>出现的问题：网络不佳，自行下载后安装</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install ./SudachiDict_core-20191224.tar.gz.tar</span><br></pre></td></tr></table></figure>
-<h2 id="编码实现"><a href="#编码实现" class="headerlink" title="编码实现"></a>编码实现</h2><p>SudachiPy的使用按照<a href="https://github.com/WorksApplications/SudachiPy" target="_blank" rel="noopener">官方示例</a>即可。<br>我使用的是SplitMode.B。</p>
-<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> sudachipy <span class="hljs-keyword">import</span> tokenizer</span><br><span class="line"><span class="hljs-keyword">from</span> sudachipy <span class="hljs-keyword">import</span> dictionary</span><br><span class="line"></span><br><span class="line">tokenizer_obj = dictionary.Dictionary().create()</span><br><span class="line">mode = tokenizer.Tokenizer.SplitMode.B</span><br><span class="line">list = [m.surface() <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> tokenizer_obj.tokenize(<span class="hljs-string">"国家公務員"</span>, mode)]</span><br><span class="line">print(list)</span><br><span class="line"><span class="hljs-comment"># =&gt; ['国家', '公務員']</span></span><br></pre></td></tr></table></figure>
 
         </div>
         
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/TechLog/tags/VisualCode/">VisualCode</a>
+                </div>
+            </div>
+        </div>
         
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
     </div>
 </div>
@@ -261,9 +236,50 @@ var _hmt = _hmt || [];
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/TechLog/2019/04/02/true/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">VisualStudioCode常用插件</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/TechLog/2019/03/28/true/">
+                <span class="level-item">Appium使用</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: '4c54ce5d89c1eb37cf5c',
+        clientSecret: '16782cfddaefbf82915f90750ff82a87d40f4e1f',
+        id: '531aa0de06955823690dddc35d3b1b91',
+        repo: 'TechLog',
+        owner: 'QinRoc',
+        admin: "QinRoc"
+    })
+    gitalk.render('comment-container')
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -570,6 +586,37 @@ var _hmt = _hmt || [];
         <div class="column-right-shadow is-hidden-widescreen is-sticky">
         
             
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#1-准备">
+        <span class="has-mr-6">1</span>
+        <span>1. 准备</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#1-1-插件">
+        <span class="has-mr-6">1.1</span>
+        <span>1.1 插件</span>
+        </a></li><li>
+        <a class="is-flex" href="#1-2-graphviz环境">
+        <span class="has-mr-6">1.2</span>
+        <span>1.2 graphviz环境</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#2-语法">
+        <span class="has-mr-6">2</span>
+        <span>2.语法</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-问题">
+        <span class="has-mr-6">3</span>
+        <span>3. 问题</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
         
             
 <div class="card widget">
@@ -689,6 +736,37 @@ var _hmt = _hmt || [];
 <div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#1-准备">
+        <span class="has-mr-6">1</span>
+        <span>1. 准备</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#1-1-插件">
+        <span class="has-mr-6">1.1</span>
+        <span>1.1 插件</span>
+        </a></li><li>
+        <a class="is-flex" href="#1-2-graphviz环境">
+        <span class="has-mr-6">1.2</span>
+        <span>1.2 graphviz环境</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#2-语法">
+        <span class="has-mr-6">2</span>
+        <span>2.语法</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-问题">
+        <span class="has-mr-6">3</span>
+        <span>3. 问题</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
