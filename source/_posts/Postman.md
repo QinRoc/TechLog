@@ -11,6 +11,6 @@ permalink: true
 toc: true
 ---
 
-Postman使用技巧
+## 使用技巧
 
-Code 可以查看具体请求中 Body 的内容；还可以生成相应语言的请求代码。
+1. Code 可以查看具体请求中 Body 的内容；还可以生成相应语言的请求代码。
