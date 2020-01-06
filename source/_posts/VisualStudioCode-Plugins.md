@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 title: VisualStudioCode常用插件
 date: 2019-04-02
 updated:

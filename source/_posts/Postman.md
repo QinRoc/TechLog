@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 title: Postman使用
 date: 2019-04-03
 updated:

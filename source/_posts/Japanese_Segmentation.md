@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 title: 日语分词
 date: 2020-01-04
 updated:

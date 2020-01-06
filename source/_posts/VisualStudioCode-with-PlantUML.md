@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 title: VisualStudioCode中PlantUML使用
 date: 2019-04-01
 updated:

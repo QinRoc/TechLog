@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 title: Appium使用
 date: 2019-03-28
 updated:
