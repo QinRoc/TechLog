@@ -11,21 +11,19 @@ permalink: true
 toc: true
 ---
 
-# 准备
+## 1. 准备
 
-## 插件
+### 1.1 插件
 
-[VisualStudioCode的插件介绍页](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+- [VisualStudioCode的插件介绍页](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+- [插件GitHub](https://github.com/qjebbs/vscode-plantuml)
 
-[插件GitHub](https://github.com/qjebbs/vscode-plantuml)
+### 1.2 graphviz环境
 
-## graphviz环境
-
-[Windows环境graphviz包](https://graphviz.gitlab.io/_pages/Download/Download_windows.html)
-
-解压zip包/安装
-
-设置环境变量：Path中增加bin目录路径
+1. 下载[Windows环境graphviz包](https://graphviz.gitlab.io/_pages/Download/Download_windows.html)
+2. 解压zip包/安装
+3. 设置环境变量：Path中增加bin目录路径
+4. 验证
 
 `dot -v` 命令验证：
 
@@ -47,15 +45,13 @@ The plugin configuration file:
     loadimage   :  (lib) bmp eps gd gd2 gif jpe jpeg jpg png ps svg
 ```
 
-## 语法
+## 2.语法
 
 [PlantUML Document](http://plantuml.com/zh/sitemap-language-specification)
 [](http://plantuml.com/zh/)
 
----
-
-# 问题
+## 3. 问题
 
 1. No @startuml found
 
-`@startuml` 需要和 `@enduml配对`
+>`@startuml` 需要和 `@enduml配对`
