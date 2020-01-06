@@ -631,3 +631,23 @@ Fast-forward
 
 
 ```
+
+>The branch ' gh-pages-hexo' has no upstream branch
+
+- [fatal: The current branch master has no upstream branch](https://stackoverflow.com/questions/23401652/fatal-the-current-branch-master-has-no-upstream-branch)
+- [在GitHub上管理项目](https://www.cnblogs.com/mengdd/p/3447464.html)
+
+Visual Studio CodeX AThe branch ' gh-pages-hexo' has no upstream branch. Would you like to publish this branch?
+ok cancel
+
+PS C:\Code\GitHub\QinRoc\TechLog> git branch --set-upstream-to=origin/gh-pages-hexo
+Branch 'gh-pages-hexo' set up to track remote branch 'gh-pages-hexo' from 'origin'.
+
+PS C:\Code\GitHub\QinRoc\TechLog> git push git@dev
+fatal: 'git@dev' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+PS C:\Code\GitHub\QinRoc\TechLog> git push
