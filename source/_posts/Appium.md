@@ -2,25 +2,27 @@
 layout: draft
 title: Appium使用
 date: 2019-03-28
-updated: 
-thumbnail: 
+updated:
+thumbnail:
 comments: true
 tags: Android
-categories: 
+categories:
 permalink: true
 toc: true
 ---
 
-# 准备
+## 1. 准备
 
-## Appium
-[官网](http://appium.io)
-[GitHub主页](https://github.com/appium/appium)
-[下载页](https://github.com/appium/appium-desktop/releases)
+### 1.1 Appium
 
-## ADB
-http://adbshell.com
-http://adbdriver.com/downloads/
+- [官网](http://appium.io)
+- [GitHub主页](https://github.com/appium/appium)
+- [下载页](https://github.com/appium/appium-desktop/releases)
+
+### 1.2 ADB
+
+- http://adbshell.com
+- http://adbdriver.com/downloads/
 
 ADB Driver Installer 提示已安装
 但是cmd中提示无此命令无用
@@ -29,12 +31,14 @@ everything搜索adb未果
 
 >Search:set adb path
 
-[Using ADB and fastboot](https://wiki.lineageos.org/adb_fastboot_guide.html)
+- [Using ADB and fastboot](https://wiki.lineageos.org/adb_fastboot_guide.html)
+- https://dl.google.com/android/repository/platform-tools-latest-windows.zip
 
-https://dl.google.com/android/repository/platform-tools-latest-windows.zip
-
+```shell
+adb devices -l
 ```
-C:\Users\Roc>adb devices -l
+
+```text
 List of devices attached
 * daemon not running; starting now at tcp:5037
 * daemon started successfully
@@ -43,38 +47,42 @@ b8b4d9e3               unauthorized transport_id:1
 
 >Search: Android SDK
 
-[Command line tools only](https://developer.android.com/studio)
+- [Command line tools only](https://developer.android.com/studio)
 
 sdk-tools-windows-4333796.zip中没有adb
 
-## 配置Appium Configurations
-    ANDROID_HOME c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\
+### 1.3 配置Appium Configurations
 
-```
-An unknown server-side error occurred while processing the command. Original error: Could not find adb.exe in c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\platform-tools\adb.exe,c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\emulator\adb.exe,c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\tools\adb.exe,c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\tools\bin\adb.exe. Do you have the Android SDK installed at 'c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\'?
-```
+ANDROID_HOME c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\
 
-    改为 ANDROID_HOME c:\Program\Dev\Android\platform-tools_r28.0.2-windows\
+```An unknown server-side error occurred while processing the command. Original error: Could not find adb.exe in c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\platform-tools\adb.exe,c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\emulator\adb.exe,c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\tools\adb.exe,c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\tools\bin\adb.exe. Do you have the Android SDK installed at 'c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\'?```
 
-```
+改为 ANDROID_HOME c:\Program\Dev\Android\platform-tools_r28.0.2-windows\
+
+```txt
 An unknown server-side error occurred while processing the command. Original error: Error getting device API level. Original error: Error executing adbExec. Original error: 'Command 'c\:\\Program\\Dev\\Android\\platform-tools_r28.0.2-windows\\platform-tools\\adb.exe -P 5037 -s b8b4d9e3 shell getprop ro.build.version.sdk' exited with code 1'; Stderr: 'error: device unauthorized.
  This adb server's $ADB_VENDOR_KEYS is not set
  Try 'adb kill-server' if that seems wrong.
  Otherwise check for a confirmation dialog on your device.'; Code: '1'
-```
+ ```
 
-未授权调试
-手机上操作授权
- "Because an app is obscuring a permission request..."
-取消常用应用的无障碍设置
+### 1.4 问题
 
-仍然报该错误
+1. 未授权调试。
 
-出现在其他应用上，取消FV悬浮球后OK
+在手机上操作授权。
 
-# 运行
+2. "Because an app is obscuring a permission request..."
 
-```
+取消常用应用的无障碍设置。
+仍然报该错误。
+出现在其他应用上，取消FV悬浮球后OK。
+
+## 2. 运行
+
+### 2.1 运行日志
+
+```txt
 [Appium] Welcome to Appium v1.12.1
 [Appium] Appium REST http interface listener started on 0.0.0.0:4723
 [HTTP] --> GET /wd/hub/sessions
@@ -82,13 +90,13 @@ An unknown server-side error occurred while processing the command. Original err
 [GENERIC] Calling AppiumDriver.getSessions() with args: []
 [GENERIC] Responding to client with driver.getSessions() result: []
 [HTTP] <-- GET /wd/hub/sessions 200 6 ms - 40
-[HTTP] 
+[HTTP]
 [HTTP] --> POST /wd/hub/session
 [HTTP] {"desiredCapabilities":{"appActivity":".ui.LauncherUI","appPackage":"com.tencent.mm","deviceName":"3T","platformName":"Android","newCommandTimeout":0,"connectHardwareKeyboard":true}}
 [MJSONWP] Calling AppiumDriver.createSession() with args: [{"appActivity":".ui.LauncherUI","appPackage":"com.tencent.mm","deviceName":"3T","platformName":"Android","newCommandTimeout":0,"connectHardwareKeyboard":true},null,null]
 [BaseDriver] Event 'newSessionRequested' logged at 1553740387810 (10:33:07 GMT+0800 (中国标准时间))
 [Appium] DeprecationWarning: 'automationName' capability was not provided. Future versions of Appium will require 'automationName' capability to be set for Android sessions.
-[Appium] Setting automation to 'UiAutomator1'. 
+[Appium] Setting automation to 'UiAutomator1'.
 [Appium] Appium v1.12.1 creating new AndroidDriver (v4.11.0) session
 [Appium] Capabilities:
 [Appium]   appActivity: .ui.LauncherUI
@@ -120,18 +128,18 @@ An unknown server-side error occurred while processing the command. Original err
 [MJSONWP] Otherwise check for a confirmation dialog on your device.'; Code: '1'
 [MJSONWP]     at ADB.getApiLevel (C:\Users\Roc\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-adb\lib\tools\adb-commands.js:92:13)
 [HTTP] <-- POST /wd/hub/session 500 490 ms - 614
-[HTTP] 
+[HTTP]
 [HTTP] --> DELETE /wd/hub/session
 [HTTP] {}
 [HTTP] No route found. Setting content type to 'text/plain'
 [HTTP] <-- DELETE /wd/hub/session 404 3 ms - 57
-[HTTP] 
+[HTTP]
 [HTTP] --> POST /wd/hub/session
 [HTTP] {"desiredCapabilities":{"appActivity":".ui.LauncherUI","appPackage":"com.tencent.mm","deviceName":"3T","platformName":"Android","newCommandTimeout":0,"connectHardwareKeyboard":true}}
 [MJSONWP] Calling AppiumDriver.createSession() with args: [{"appActivity":".ui.LauncherUI","appPackage":"com.tencent.mm","deviceName":"3T","platformName":"Android","newCommandTimeout":0,"connectHardwareKeyboard":true},null,null]
 [BaseDriver] Event 'newSessionRequested' logged at 1553740476436 (10:34:36 GMT+0800 (中国标准时间))
 [Appium] DeprecationWarning: 'automationName' capability was not provided. Future versions of Appium will require 'automationName' capability to be set for Android sessions.
-[Appium] Setting automation to 'UiAutomator1'. 
+[Appium] Setting automation to 'UiAutomator1'.
 [Appium] Appium v1.12.1 creating new AndroidDriver (v4.11.0) session
 [Appium] Capabilities:
 [Appium]   appActivity: .ui.LauncherUI
@@ -160,18 +168,18 @@ An unknown server-side error occurred while processing the command. Original err
 [MJSONWP] Otherwise check for a confirmation dialog on your device.'; Code: '1'
 [MJSONWP]     at ADB.getApiLevel (C:\Users\Roc\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-adb\lib\tools\adb-commands.js:92:13)
 [HTTP] <-- POST /wd/hub/session 500 158 ms - 614
-[HTTP] 
+[HTTP]
 [HTTP] --> DELETE /wd/hub/session
 [HTTP] {}
 [HTTP] No route found. Setting content type to 'text/plain'
 [HTTP] <-- DELETE /wd/hub/session 404 1 ms - 57
-[HTTP] 
+[HTTP]
 [HTTP] --> POST /wd/hub/session
 [HTTP] {"desiredCapabilities":{"appActivity":".ui.LauncherUI","appPackage":"com.tencent.mm","deviceName":"3T","platformName":"Android","newCommandTimeout":0,"connectHardwareKeyboard":true}}
 [MJSONWP] Calling AppiumDriver.createSession() with args: [{"appActivity":".ui.LauncherUI","appPackage":"com.tencent.mm","deviceName":"3T","platformName":"Android","newCommandTimeout":0,"connectHardwareKeyboard":true},null,null]
 [BaseDriver] Event 'newSessionRequested' logged at 1553740775202 (10:39:35 GMT+0800 (中国标准时间))
 [Appium] DeprecationWarning: 'automationName' capability was not provided. Future versions of Appium will require 'automationName' capability to be set for Android sessions.
-[Appium] Setting automation to 'UiAutomator1'. 
+[Appium] Setting automation to 'UiAutomator1'.
 [Appium] Appium v1.12.1 creating new AndroidDriver (v4.11.0) session
 [Appium] Capabilities:
 [Appium]   appActivity: .ui.LauncherUI
@@ -265,13 +273,13 @@ An unknown server-side error occurred while processing the command. Original err
 [MJSONWP (40cd6c8c)] Cached the protocol value 'MJSONWP' for the new session 40cd6c8c-53b1-4019-99f7-d52e45a88fb5
 [MJSONWP (40cd6c8c)] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appActivity":".ui.LauncherUI","appPackage":"com.tencent.mm","deviceName":"3T","platformName":"Android","newCommandTimeout":0,"connectHardwareKeyboard":true},"appActivity":".ui.LauncherUI","appPackage":"com.tencent.mm","deviceName":"b8b4d9e3","platformName":"Android","newCommandTimeout":0,"connectHardwareKeyboard":true,"deviceUDID":"b8b4d9e3","platformVersion":"8.0.0","deviceScreenSize":"1080x1920","deviceModel":"ONEPLUS A3010","deviceManufacturer":"OnePlus"}
 [HTTP] <-- POST /wd/hub/session 200 62017 ms - 741
-[HTTP] 
+[HTTP]
 [HTTP] --> POST /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/context
 [HTTP] {"name":"NATIVE_APP"}
 [MJSONWP (40cd6c8c)] Calling AppiumDriver.setContext() with args: ["NATIVE_APP","40cd6c8c-53b1-4019-99f7-d52e45a88fb5"]
 [MJSONWP (40cd6c8c)] Responding to client with driver.setContext() result: null
 [HTTP] <-- POST /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/context 200 2 ms - 76
-[HTTP] 
+[HTTP]
 [HTTP] --> GET /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/source
 [HTTP] {}
 [MJSONWP (40cd6c8c)] Calling AppiumDriver.getPageSource() with args: ["40cd6c8c-53b1-4019-99f7-d52e45a88fb5"]
@@ -286,13 +294,13 @@ An unknown server-side error occurred while processing the command. Original err
 [AndroidBootstrap] Received command result from bootstrap
 [MJSONWP (40cd6c8c)] Responding to client with driver.getPageSource() result: "
 [HTTP] <-- GET /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/source 200 852 ms - 11356
-[HTTP] 
+[HTTP]
 [HTTP] --> GET /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/screenshot
 [HTTP] {}
 [MJSONWP (40cd6c8c)] Calling AppiumDriver.getScreenshot() with args: ["40cd6c8c-53b1-4019-99f7-d52e45a88fb5"]
 [MJSONWP (40cd6c8c)] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAsR0lEQVR4AezBAQ0AMAwDoL7+Pe86mgAvyQUAAABgWAMAAAAwrgEAAAAY1wAAAACMawAAAADGNQAAAADjGgAAAIBxDQAAAMC4BgAAAGBcAwAAADCuAQAAABjXAAAAAIxrAAAAAMY1AAAAAOMaAAAAgHENAAAAwLgGAAAAYFwDAAAAMK4BAAAAGNcAAAAAjGsAAAAAxjUAAAAA4xoAAACAcQ0AAADAuAYAAABgXAMAAAAwrgEAAAAY1wAAAACMawAAAADGNQAAAADjGgAAAIBxDQAAAMC4BgAAAGBcAwAAADCuAQAAABjXAAAAAIxrAAAAAMY1AAAAAOMaAAAAgHENAAAAwLgGAAAAYFwDAAAAMK4BAAAAGNcAAAAAjGsAAAAAxjUAAAAA4xoAAACAcQ0AAADAuAYAAABgXAMAAAAwrgEAAAAY1wAAAACMawAAAADGNQAAAADjGgAAAIBxDQAAAMC4BgAAAGBcAwAAADCuAQAAABjXAAAAAIxrAAAAAMY1AAAAAOMaAAAAgHENAAAAwLgGAAAAYFwDAAAAMK4BAAAAGNcAAAAAjGsAAAAAxjUAAAAA4xoAAACAcQ0AAADAuAYAAABgXAMAAAAwrgEAAAAY1wAAAACMawAAAADGNQAAAADjGgAAAIBxDQAAAMC4BgAAAGBcAwAAADCuAQAAABjXAAAAAIxrAAAAAMY1AAAAAOMaAAAAgHENAAAAwLgGAAAAYFwDAAAAMK4BAAAAGNcAAAAAjGsAAAAAxjUAAAAA4xoAAACAcQ0AAADAuAYAAABgXAMAAAAwrgEAAAAY1wAAAACMawAAAADGNQAAAADjGgAAAIBxDQAAAMC4BgAAAGBcAwAAADCuAQAAABjXAAAAAIxrAAAAAMY1AAAAAOMaAAAAgHENAAAAwLgGAAAAYFwDAAAAMK4BAAAAGNcAAAAAjGsAAAAAxjUAAAAA4xoAAACAcQ0AAADA...
 [HTTP] <-- GET /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/screenshot 200 1061 ms - 15266
-[HTTP] 
+[HTTP]
 [HTTP] --> GET /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/window/current/size
 [HTTP] {}
 [MJSONWP (40cd6c8c)] Calling AppiumDriver.getWindowSize() with args: ["current","40cd6c8c-53b1-4019-99f7-d52e45a88fb5"]
@@ -304,7 +312,7 @@ An unknown server-side error occurred while processing the command. Original err
 [AndroidBootstrap] Received command result from bootstrap
 [MJSONWP (40cd6c8c)] Responding to client with driver.getWindowSize() result: {"height":1920,"width":1080}
 [HTTP] <-- GET /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/window/current/size 200 18 ms - 100
-[HTTP] 
+[HTTP]
 [HTTP] --> POST /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/elements
 [HTTP] {"using":"id","value":"com.oneplus.aod:id/battery_empty_view"}
 [MJSONWP (40cd6c8c)] Calling AppiumDriver.findElements() with args: ["id","com.oneplus.aod:id/battery_empty_view","40cd6c8c-53b1-4019-99f7-d52e45a88fb5"]
@@ -325,7 +333,7 @@ An unknown server-side error occurred while processing the command. Original err
 [AndroidBootstrap] Received command result from bootstrap
 [MJSONWP (40cd6c8c)] Responding to client with driver.findElements() result: [{"element-6066-11e4-a52e-4f735466cecf":"1","ELEMENT":"1"}]
 [HTTP] <-- POST /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/elements 200 50 ms - 131
-[HTTP] 
+[HTTP]
 [HTTP] --> POST /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/elements
 [HTTP] {"using":"id","value":"com.oneplus.aod:id/main_view"}
 [MJSONWP (40cd6c8c)] Calling AppiumDriver.findElements() with args: ["id","com.oneplus.aod:id/main_view","40cd6c8c-53b1-4019-99f7-d52e45a88fb5"]
@@ -350,7 +358,7 @@ An unknown server-side error occurred while processing the command. Original err
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
 [MJSONWP (40cd6c8c)] Responding to client with driver.findElements() result: []
 [HTTP] <-- POST /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/elements 200 128 ms - 74
-[HTTP] 
+[HTTP]
 [HTTP] --> POST /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/elements
 [HTTP] {"using":"xpath","value":"/hierarchy/android.widget.RelativeLayout/android.widget.LinearLayout"}
 [MJSONWP (40cd6c8c)] Calling AppiumDriver.findElements() with args: ["xpath","/hierarchy/android.widget.RelativeLayout/android.widget.LinearLayout","40cd6c8c-53b1-4019-99f7-d52e45a88fb5"]
@@ -367,7 +375,7 @@ An unknown server-side error occurred while processing the command. Original err
 [AndroidBootstrap] Received command result from bootstrap
 [MJSONWP (40cd6c8c)] Responding to client with driver.findElements() result: []
 [HTTP] <-- POST /wd/hub/session/40cd6c8c-53b1-4019-99f7-d52e45a88fb5/elements 200 442 ms - 74
-[HTTP] 
+[HTTP]
 [AndroidBootstrap] Emitting alert message...
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Emitting system alert message
 [AndroidBootstrap] Emitting alert message...
@@ -375,22 +383,20 @@ An unknown server-side error occurred while processing the command. Original err
 ```
 
 看到clear命令心中一凉，清空数据？
+
 ```[ADB] Running 'c:\Program\Dev\Android\platform-tools_r28.0.2-windows\platform-tools\adb.exe -P 5037 -s b8b4d9e3 shell pm clear com.tencent.mm'```
 
-启动后重新登录、载入数据
+启动微信后提示要重新登录、载入数据。
 
-真的都被清空了
+数据真的都被清空了，空空如也。权限也被清除了。所有的设置也全部清空。
 
-微痕迹里还能看到历史文件
+钛备份恢复数据最新备份是2018.10.20。丢失了几个月的数据......微痕迹APP里还能看到一些历史文件。
 
-[adb命令pm工具讲解](https://www.jianshu.com/p/9123cc89e9f3)
-    clear ‘pkgname’ ：对指定的package删除所有数据；
+- [adb命令pm工具讲解](https://www.jianshu.com/p/9123cc89e9f3)
 
-钛备份恢复数据最新备份是2018.10.20
-以后要养成备份数据的习惯
+> clear ‘pkgname’ ：对指定的package删除所有数据；
 
-还是不要在日用手机上调试了。
+## 教训
 
-权限也被清除了。
-
-所有的设置也全部清空。
+1. 要养成备份数据的习惯。
+2. 不要在日用手机上调试了。
