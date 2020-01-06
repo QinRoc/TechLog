@@ -326,7 +326,7 @@ visual studio code:
 
 
 [如何在长城后面go get一些库](https://colobu.com/2017/01/26/how-to-go-get-behind-GFW/)
-shadowsocks的安装和使用我就不说了，请自行搜索。Shadowsocks虽然能访问一些屏蔽的站点比如golang.org,但是它基于socks5协议，对于go get来说，依然不可用。
+shadowsocks 的安装和使用我就不说了，请自行搜索。Shadowsocks 虽然能访问一些屏蔽的站点比如golang.org,但是它基于socks5协议，对于go get来说，依然不可用。
 
 
 在本机启动一个http代理，以shadowsocks为二级代理。

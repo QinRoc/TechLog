@@ -2,15 +2,14 @@
 layout: post
 title: 广告协会DIF平台
 date: 2019-03-27 18:22:56
-updated: 
-thumbnail: 
-categories: 
+updated:
+thumbnail:
+categories:
 tags: [AD,Blockchain]
 comments: true
 permalink: true
 toc: true
 ---
-
 
 # GIVT List & DIF
 
@@ -20,7 +19,7 @@ toc: true
 
 DIF联盟链是它的落地项目。
 
->DIF联盟链已经实现的共识数据处理类型有GIVT来源IP地址（黑名单）、GIVT来源移动装置ID （黑名单）、移动装置缺省值（灰名单）[MOU4] 、S2S监测服务器IP地址（灰名单）；
+> DIF 联盟链已经实现的共识数据处理类型有 GIVT 来源IP地址（黑名单）、GIVT 来源移动装置ID （黑名单）、移动装置缺省值（灰名单）[MOU4] 、S2S 监测服务器IP地址（灰名单）；
 迭代中的共识数据处理类型有GIVT来源UA特征（黑名单）、移动App访问代理IP地址（灰名单）。
 
 [DIF in GitHub](https://github.com/tagphi/dif-client/)
