@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Roc&#39;s Tech Log</title>
+<title>归档: 2020 - Roc&#39;s Tech Log</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -12,7 +12,7 @@
 <meta name="keywords" content="Java Tech 技术 后端 Back-end">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Roc&#39;s Tech Log">
-<meta property="og:url" content="http://qinroc.github.com/TechLog/index.html">
+<meta property="og:url" content="http://qinroc.github.com/TechLog/archives/2020/index.html">
 <meta property="og:site_name" content="Roc&#39;s Tech Log">
 <meta property="og:description" content="Record learning and technical problem.">
 <meta property="og:locale" content="zh-CN">
@@ -120,7 +120,7 @@ var _hmt = _hmt || [];
             
             <div class="navbar-start">
                 
-                <a class="navbar-item is-active" href="/TechLog/">Home</a>
+                <a class="navbar-item" href="/TechLog/">Home</a>
                 
                 <a class="navbar-item" href="/TechLog/archives">Archives</a>
                 
@@ -158,151 +158,32 @@ var _hmt = _hmt || [];
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-01-03T16:00:00.000Z">2020-01-04</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 359 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/TechLog/2020/01/04/true/">日语分词</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="分词库"><a href="#分词库" class="headerlink" title="分词库"></a>分词库</h2><p>Google和Github上以“japanese segmentation”为关键词搜索：</p>
-<ul>
-<li><a href="https://github.com/go-ego/gse" target="_blank" rel="noopener">gse</a> #Go</li>
-</ul>
-<blockquote>
-<p>Go efficient text segmentation @vcaesar; support english, chinese, japanese and other. Go 语言高性能分词</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/ikawaha/kagome" target="_blank" rel="noopener">kagome</a> #Go</li>
-</ul>
-<blockquote>
-<p>Self-contained Japanese Morphological Analyzer written in pure Go</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/WorksApplications/Sudachi" target="_blank" rel="noopener">Sudachi</a> #Java #Python</li>
-</ul>
-<blockquote>
-<p>A Japanese Tokenizer for Business</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/WorksApplications/SudachiPy" target="_blank" rel="noopener">SudachiPy</a></li>
-</ul>
-<blockquote>
-<p>Python version of Sudachi, a Japanese tokenizer.</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/WorksApplications/SudachiDict" target="_blank" rel="noopener">SudachiDict</a></li>
-</ul>
-<blockquote>
-<p>A lexicon for Sudachi</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/taishi-i/nagisa" target="_blank" rel="noopener">nagisa</a> #Python</li>
-</ul>
-<blockquote>
-<p>A Japanese tokenizer based on recurrent neural networks</p>
-</blockquote>
-<ul>
-<li><a href="https://www.atilika.org/" target="_blank" rel="noopener">Kuromoji</a><blockquote>
-<p>Kuromoji is an open source Japanese morphological analyzer written in Java.</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>选用SudachiPy进行分词。</p>
-<h2 id="安装SudachiPy库"><a href="#安装SudachiPy库" class="headerlink" title="安装SudachiPy库"></a>安装SudachiPy库</h2><figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install SudachiPy</span><br></pre></td></tr></table></figure>
-<p>出现的问题:</p>
-<blockquote>
-<p>x86_64-linux-gnu-gcc: error trying to exec ‘cc1plus’: execvp: No such file or directory</p>
-</blockquote>
-<p><a href="https://stackoverflow.com/questions/22414109/g-error-trying-to-exec-cc1plus-execvp-no-such-file-or-directory/27944551#27944551" target="_blank" rel="noopener">g++: error trying to exec ‘cc1plus’: execvp: No such file or directory</a></p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install g++</span><br><span class="line">python3 -m pip install https://object-storage.tyo2.conoha.io/v1/nc_2520839e1f9641b08211a5c85243124a/sudachi/SudachiDict_core-20191224.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="安装词典"><a href="#安装词典" class="headerlink" title="安装词典"></a>安装词典</h2><figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install https://object-storage.tyo2.conoha.io/v1/nc_2520839e1f9641b08211a5c85243124a/sudachi/SudachiDict_core-20191224.tar.gz</span><br></pre></td></tr></table></figure>
-<p>出现的问题：网络不佳，自行下载后安装</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install ./SudachiDict_core-20191224.tar.gz.tar</span><br></pre></td></tr></table></figure>
-<h2 id="编码实现"><a href="#编码实现" class="headerlink" title="编码实现"></a>编码实现</h2><p>SudachiPy的使用按照<a href="https://github.com/WorksApplications/SudachiPy" target="_blank" rel="noopener">官方示例</a>即可。<br>我使用的是SplitMode.B。</p>
-<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> sudachipy <span class="hljs-keyword">import</span> tokenizer</span><br><span class="line"><span class="hljs-keyword">from</span> sudachipy <span class="hljs-keyword">import</span> dictionary</span><br><span class="line"></span><br><span class="line">tokenizer_obj = dictionary.Dictionary().create()</span><br><span class="line">mode = tokenizer.Tokenizer.SplitMode.B</span><br><span class="line">list = [m.surface() <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> tokenizer_obj.tokenize(<span class="hljs-string">"国家公務員"</span>, mode)]</span><br><span class="line">print(list)</span><br><span class="line"><span class="hljs-comment"># =&gt; ['国家', '公務員']</span></span><br></pre></td></tr></table></figure>
 
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="tag is-link">
+        2020
+        </h3>
+        <div class="timeline">
+        
+            <article class="media">
+                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-01-03T16:00:00.000Z">2020-01-04</time>
+                        <a href="/TechLog/2020/01/04/true/" class="has-link-black-ter is-size-6">日语分词</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
         </div>
-        
-        
-        
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-24T03:31:48.000Z">2019-03-24</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 111 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/TechLog/2019/03/24/true/">Blog 1.0.0</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Blog"><a href="#Blog" class="headerlink" title="Blog"></a>Blog</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>形式：自建静态博客<br>托管平台：GitHub<br>静态博客生成器：Hexo<br>主题：hexo-theme-icarus<br>CI： Travis.CI</p>
-<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>统计：Google Analytics, Baidu, 不蒜子<br>评论：gittalk<br>分享：share.js<br>标题永久地址转换： hexo-permalink-pinyin<br>搜索：内置</p>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ul>
-<li>本地调试时使用Ctrl+C，而非Ctrl+Z–导致端口占用。</li>
-</ul>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li>配置CDN</li>
-</ul>
-<h2 id="Change-Log"><a href="#Change-Log" class="headerlink" title="Change Log"></a>Change Log</h2><h3 id="V1-0-0"><a href="#V1-0-0" class="headerlink" title="V1.0.0"></a>V1.0.0</h3><ul>
-<li>初始化Blog并上传Git</li>
-</ul>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
 
 
 </div>
